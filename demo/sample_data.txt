@@ -1,0 +1,21 @@
+[
+    {'title':'Heavy Metal', 'results': [
+        ['/metal/1', 'Disturbed - The Game', 'icons/metal.png'],
+        ['/metal/2', 'Marilyn Manson - The Beautiful People', 'icons/metal.png'],
+        ['/metal/3', 'Soil - 2 Skins', 'icons/metal.png'],
+        ['/metal/4', 'Alestorm - Wenches & Mead', 'icons/metal.png']
+    ]},
+    {'title':'Pop', 'results':[
+        ['/pop/1', 'Michael Jackson - Bad', 'icons/pop.png'],
+        ['/pop/2', 'Britney Spears - If U Seek Amy', 'icons/pop.png'],
+        ['/pop/3', 'Take That - Relight My Fire', 'icons/pop.png'],
+        ['/pop/4', 'Rick Astley - Never Gonna Give You Up', 'icons/pop.png']
+    ]},
+    {'title':'Folk', 'results':[
+        ['/folk/1', 'The Proclaimers - I\'m Gonna Be', 'icons/folk.png'],
+        ['/folk/2', 'Bob Dylan - Hurricane', 'icons/folk.png'],
+        ['/folk/3', 'Jason Mraz - Geek In The Pink', 'icons/folk.png'],
+        ['/folk/4', 'Beirut - Nantes', 'icons/folk.png']
+    ]}
+]
+

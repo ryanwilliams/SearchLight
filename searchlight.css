@@ -1,0 +1,50 @@
+table.searchlight-results {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Tahoma, Geneva, Helvetica, Arial, sans-serif;
+    font-size: 0.75em;
+    font-weight: normal;
+}
+div.searchlight-results-wrapper {
+    color: #000;
+    border: 1px solid #aaa;
+    margin: -1px;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 10px #000;
+    -moz-box-shadow: 0 2px 10px #000;
+}
+table.searchlight-results th,
+table.searchlight-results td {
+    padding: 4px;
+    text-shadow: 1px 1px 1px #aaa;
+}
+table.searchlight-results th {
+    background: #fdfdfd;
+    color: #222;
+    font-size: 95%;
+    border-right: 1px solid #ccc;
+    width: 80px;
+    text-align: right;
+    font-weight: normal;
+}
+table.searchlight-results td {
+    background: #eee;
+}
+table.searchlight-results td .searchlight-result-item {
+    padding: 1px 0;
+}
+table.searchlight-results tr {
+    cursor: pointer;
+}
+table.searchlight-results tr.searchlight-selected th,
+table.searchlight-results tr.searchlight-selected td {
+    background: #05b;
+    color: #fff;
+    text-shadow: 1px 1px 1px #014;
+}
+table.searchlight-results .searchlight-result-icon {
+    margin-right: 4px;
+    vertical-align: text-top;
+}

@@ -1,0 +1,53 @@
+h1. "Search Light jQuery Plugin":http://github.com/Ratty/SearchLight/
+
+Copyright 2009 Ryan Williams
+  "http://ryanwilliams.org":http://ryanwilliams.org
+  "searchlight@ryanwilliams.org":mailto:searchlight@ryanwilliams.org
+
+Dual licensed under the MIT and GPL licenses:
+  http://www.opensource.org/licenses/mit-license.php
+  http://www.gnu.org/licenses/gpl.html
+
+Please see the file "demo/demo.html" to view a working example.
+
+Search Light is a jQuery plugin which displays search results in an easy to
+navigate menu. It's simple to setup. Simply include the JavaScript and CSS
+files in your <head> section.
+
+<pre><code><link rel="stylesheet" href="searchlight.css">
+<script type="text/javascript" src="jquery.searchlight.js"></script></code></pre>
+
+Then activate the plugin on any text field which will be used for searching.
+
+<pre><code><input type="text" id="searchfield" />
+<script type="text/javascript">
+    $('#searchfield').searchlight('do_search.php');
+</script></code></pre>
+
+The term entered into the text field will be sent to the script using a GET request with the argument named "q" like:
+
+<pre>http://example.com/do_search.php?q=foobar</pre>
+
+Your script "do_search.php" must return some JSON structured like this example (indentation and whitespace is optional):
+
+<pre><code>[
+    {'title':'Heavy Metal', 'results': [
+        ['/metal/1', 'Disturbed - The Game', 'icons/metal.png'],
+        ['/metal/2', 'Marilyn Manson - The Beautiful People', 'icons/metal.png'],
+        ['/metal/3', 'Soil - 2 Skins', 'icons/metal.png'],
+        ['/metal/4', 'Alestorm - Wenches & Mead', 'icons/metal.png']
+    ]},
+    {'title':'Pop', 'results':[
+        ['/pop/1', 'Michael Jackson - Bad', 'icons/pop.png'],
+        ['/pop/2', 'Britney Spears - If U Seek Amy', 'icons/pop.png'],
+        ['/pop/3', 'Take That - Relight My Fire', 'icons/pop.png'],
+        ['/pop/4', 'Rick Astley - Never Gonna Give You Up', 'icons/pop.png']
+    ]},
+    {'title':'Folk', 'results':[
+        ['/folk/1', 'The Proclaimers - I\'m Gonna Be', 'icons/folk.png'],
+        ['/folk/2', 'Bob Dylan - Hurricane', 'icons/folk.png'],
+        ['/folk/3', 'Jason Mraz - Geek In The Pink', 'icons/folk.png'],
+        ['/folk/4', 'Beirut - Nantes', 'icons/folk.png']
+    ]}
+]</code></pre>
+

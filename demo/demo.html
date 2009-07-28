@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="../jquery.searchlight.js"></script>
+        <link rel="stylesheet" href="../searchlight.css">
+        <style type="text/css" media="screen">
+            html, body {
+                height: 100%;
+            }
+        </style>
+        <script type="text/javascript">
+            jQuery(function() {
+                $('#searchlight').searchlight('sample_data.txt');
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Search Light</h1>
+        <input id="searchlight" type="text" style="width: 350px">
+    </body>
+</html>
