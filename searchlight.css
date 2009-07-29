@@ -1,3 +1,6 @@
+div.searchlight-balloon {
+    opacity: 0.95;
+}
 table.searchlight-results {
     border-collapse: collapse;
     width: 100%;
