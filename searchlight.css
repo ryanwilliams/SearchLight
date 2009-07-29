@@ -6,6 +6,7 @@ table.searchlight-results {
     font-family: Tahoma, Geneva, Helvetica, Arial, sans-serif;
     font-size: 0.75em;
     font-weight: normal;
+    width: 100%;
 }
 div.searchlight-results-wrapper {
     color: #000;
