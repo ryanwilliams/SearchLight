@@ -3,7 +3,6 @@ div.searchlight-balloon {
 }
 table.searchlight-results {
     border-collapse: collapse;
-    width: 100%;
     font-family: Tahoma, Geneva, Helvetica, Arial, sans-serif;
     font-size: 0.75em;
     font-weight: normal;
@@ -23,6 +22,11 @@ table.searchlight-results td {
     padding: 4px;
     text-shadow: 1px 1px 1px #aaa;
 }
+table.searchlight-results .searchlight-header-text,
+table.searchlight-results .searchlight-result-text {
+    white-space: nowrap;
+}
+
 table.searchlight-results th {
     background: #fdfdfd;
     color: #222;

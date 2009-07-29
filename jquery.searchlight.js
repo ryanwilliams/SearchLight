@@ -48,9 +48,14 @@
         var results = $(document.createElement('div'));
         results.attr('className', 'searchlight-results-wrapper');
         results.css({
-            width: '100%',
             height: '100%'
         });
+
+        if ($.browser.msie && parseFloat($.browser.version) <= 7) {
+            results.css({
+                width: '1%'
+            });
+        }
 
         container.append(results);
         $(document.body).append(container);
@@ -169,9 +174,13 @@
 
             var th = document.createElement('th');
             var td = document.createElement('td');
+            $(th).html('<span class="searchlight-header-text"></span>');
+            $(td).html('<span class="searchlight-result-text"></span>');
+            var th_d = th.firstChild;
+            var td_d = td.firstChild;
 
             if (first) {
-                $(th).text(name);
+                $(th_d).text(name);
                 first = false;
             }
 
@@ -182,10 +191,10 @@
                 img.style.height = '16px';
                 // If icon, then use that otherwise use blank
                 img.src = r[2] ? r[2] : 'icons/blank.gif';
-                $(td).append(img);
+                $(td_d).append(img);
             }
 
-            $(td).append(r[1]);
+            $(td_d).append(r[1]);
 
             $(tr).append(th);
             $(tr).append(td);
