@@ -1,6 +1,6 @@
 /*
  * jQuery Search Light Plugin
- * version: 1.0 (2009/07/28)
+ * version: 1.0.1 (2009/07/29)
  * @requires jQuery v1.3.0 or later
  *
  * Copyright 2009 Ryan Williams
@@ -19,23 +19,31 @@
             searchDelay: 500,
             limitPerCategory: 5,
             actionFunction: null,
-            align: 'center',    // TODO
-            width: 'auto',      // TODO
+            align: 'left',
+            width: 'auto',
+            showIcons: true,
             showEffect: 'fade', // TODO
             hideEffect: 'fade'  // TODO
         }, options);
+        this._settings = settings;
 
         var input = $(input);
         var container = $(document.createElement('div'));
         container.attr('className',  'searchlight-balloon');
         container.css({
-            width: input.outerWidth(),
             position: 'absolute',
-            left: input.offset().left,
             top: input.offset().top + input.outerHeight(),
-            opacity: 0.8,
             display: 'none'
         });
+
+        if (settings.width == 'auto') {
+            container.css('width', input.outerWidth());
+        }
+        if (settings.align == 'left') {
+            container.css('left', input.offset().left);
+        } else if (settings.align == 'right') {
+            container.css('right', $(document.body).innerWidth() - (input.offset().left + input.outerWidth()));
+        }
 
         var results = $(document.createElement('div'));
         results.attr('className', 'searchlight-results-wrapper');
@@ -138,7 +146,9 @@
             searchlight.clearResults();
             for (var i = 0; i < results.length; i++) {
                 var r = results[i]
-                searchlight.addResultCategory(r.title, r.results);
+                if (r.results.length > 0) {
+                    searchlight.addResultCategory(r.title, r.results);
+                }
             }
             searchlight.show();
         });
@@ -164,13 +174,16 @@
                 $(th).text(name);
                 first = false;
             }
-            var img = document.createElement('img');
-            img.className = 'searchlight-result-icon';
-            img.style.width = '16px';
-            img.style.height = '16px';
-            // If icon, then use that otherwise use blank
-            img.src = r[2] ? r[2] : 'icons/blank.gif';
-            $(td).append(img);
+
+            if (this._settings.showIcons) {
+                var img = document.createElement('img');
+                img.className = 'searchlight-result-icon';
+                img.style.width = '16px';
+                img.style.height = '16px';
+                // If icon, then use that otherwise use blank
+                img.src = r[2] ? r[2] : 'icons/blank.gif';
+                $(td).append(img);
+            }
 
             $(td).append(r[1]);
 
