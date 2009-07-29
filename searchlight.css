@@ -55,3 +55,7 @@ table.searchlight-results .searchlight-result-icon {
     margin-right: 4px;
     vertical-align: text-top;
 }
+table.searchlight-results tr.searchlight-spacer-row td {
+    height: 5px;
+}
+
