@@ -28,7 +28,7 @@ The term entered into the text field will be sent to the script using a GET requ
 
 <pre>http://example.com/do_search.php?q=foobar</pre>
 
-Your script "do_search.php" must return some JSON structured like this example (indentation and whitespace is optional):
+Your script "do_search.php" must return some JSON structured like this example (indentation and whitespace is optional. Also the 'More' category is optional):
 
 <pre><code>[
     {'title':'Heavy Metal', 'results': [
@@ -48,6 +48,9 @@ Your script "do_search.php" must return some JSON structured like this example (
         ['/folk/2', 'Bob Dylan - Hurricane', 'icons/folk.png'],
         ['/folk/3', 'Jason Mraz - Geek In The Pink', 'icons/folk.png'],
         ['/folk/4', 'Beirut - Nantes', 'icons/folk.png']
+    ]},
+    { 'title': 'More', 'results': [ 
+        ['/link_to_full_search', '168 more search results', '']
     ]}
 ]</code></pre>
 

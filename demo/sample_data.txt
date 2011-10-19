@@ -16,6 +16,9 @@
         ['/folk/2', 'Bob Dylan - Hurricane', 'icons/folk.png'],
         ['/folk/3', 'Jason Mraz - Geek In The Pink', 'icons/folk.png'],
         ['/folk/4', 'Beirut - Nantes', 'icons/folk.png']
+    ]},
+    { 'title': 'More', 'results': [ 
+        ['#', '168 more search results', '']
     ]}
 ]
 

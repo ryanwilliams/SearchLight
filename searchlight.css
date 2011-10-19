@@ -59,4 +59,14 @@ table.searchlight-results .searchlight-result-icon {
 table.searchlight-results tr.searchlight-spacer-row td {
     height: 5px;
 }
-
+table.searchlight-results td#searchlight-more-link {
+  text-align: center;
+  color: blue;
+  text-shadow: none;
+}
+table.searchlight-results td#searchlight-more-link img {
+  display: none;
+}
+table.searchlight-results tr.searchlight-selected td#searchlight-more-link {
+  color: white;
+}
