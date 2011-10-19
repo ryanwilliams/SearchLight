@@ -60,7 +60,6 @@ table.searchlight-results tr.searchlight-spacer-row td {
     height: 5px;
 }
 table.searchlight-results td#searchlight-more-link {
-  text-align: center;
   color: blue;
   text-shadow: none;
 }
