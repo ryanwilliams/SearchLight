@@ -29,7 +29,7 @@
 
         var input = $(input);
         var container = $(document.createElement('div'));
-        container.attr('className',  'searchlight-balloon');
+        container.attr('class',  'searchlight-balloon');
         container.css({
             position: 'absolute',
             top: input.offset().top + input.outerHeight(),
@@ -46,7 +46,7 @@
         }
 
         var results = $(document.createElement('div'));
-        results.attr('className', 'searchlight-results-wrapper');
+        results.attr('class', 'searchlight-results-wrapper');
         results.css({
             height: '100%'
         });
@@ -170,7 +170,7 @@
             var r = results[i];
 
             var tr = document.createElement('tr');
-            $(tr).attr('className', 'searchlight-not-selected');
+            $(tr).attr('class', 'searchlight-not-selected');
 
             var th = document.createElement('th');
             var td = document.createElement('td');
