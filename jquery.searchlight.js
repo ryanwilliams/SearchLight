@@ -174,14 +174,20 @@
 
             var th = document.createElement('th');
             var td = document.createElement('td');
+            if (name.match(/more/i)) {
+              $(td).attr('id', 'searchlight-more-link');
+            }
+            
             $(th).html('<span class="searchlight-header-text"></span>');
             $(td).html('<span class="searchlight-result-text"></span>');
             var th_d = th.firstChild;
             var td_d = td.firstChild;
 
-            if (first) {
-                $(th_d).text(name);
-                first = false;
+            if (!name.match(/more/i)) {
+              if (first) {
+                  $(th_d).text(name);
+                  first = false;
+              }
             }
 
             if (this._settings.showIcons) {
